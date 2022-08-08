@@ -1,0 +1,26 @@
+$border-radius-style: 16px;
+$border-style: 1px solid rgba(255, 255, 255, 0.1);
+
+.rounded{
+  border-radius: $border-radius-style;
+}
+
+.border{
+  border: $border-style;
+}
+
+.border-top{
+    border-top: $border-style;
+}
+
+.border-right{
+  border-right: $border-style;
+}
+
+.border-bottom{
+  border-bottom: $border-style;
+}
+
+.border-left{
+  border-left: $border-style;
+}

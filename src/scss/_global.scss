@@ -1,0 +1,12 @@
+@import './typography';
+@import './colors';
+@import './borders';
+@import './flex';
+@import './spacing';
+@import './layout';
+
+html, body{
+  font-family: $font-family;
+  background-color: $bg-DP01;
+  color: $neutral-white;
+}
