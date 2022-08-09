@@ -1,0 +1,10 @@
+<div  class="d-flex align-items-center tag" >
+  <img src="../../../assets/icons/status/status-{{type}}.svg" alt="icon-status" >
+
+  <ng-container [ngSwitch]="type"  >
+    <label class="text-4" *ngSwitchCase="'check'" >Arriba de {{value}}</label>
+    <label class="text-4" *ngSwitchCase="'warning'" >{{value}}</label>
+    <label class="text-4" *ngSwitchCase="'close'" >Abajo de {{value}}</label>
+  </ng-container>
+
+</div>

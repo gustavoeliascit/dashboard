@@ -5,19 +5,35 @@
       {{tittle}}
     </section>
 
-    <section class="d-flex align-items-center" >
-      <div  class="opacity-8 h1 mr-0" >{{value}}</div>
-      <img class="mr-0" src="../../../assets/icons/growt/growt-{{growt}}.svg" alt="signal">
-      <div *ngIf="porcent" class="opacity-8" >
-        ({{porcent}})
-      </div>
-    </section>
+    <ng-container [ngSwitch]="size" >
+      <section class="d-flex align-items-center" *ngSwitchCase="'default'"  >
+        <div  class="opacity-8 h1 mr-0" >{{value}}</div>
+        <img class="mr-0" src="../../../assets/icons/growt/growt-{{icon}}.svg" alt="signal">
+        <div *ngIf="porcent" class="opacity-8" >
+          ({{porcent}})
+        </div>
+      </section>
+
+      <section class="d-flex align-items-center" *ngSwitchCase="'small'"  >
+        <div  class="opacity-8 h5 mr-0" >{{value}}</div>
+        <img class="mr-0" src="../../../assets/icons/growt/growt-{{icon}}.svg" alt="signal">
+        <div *ngIf="porcent" class="opacity-8" >
+          ({{porcent}})
+        </div>
+      </section>
+
+      <section class="d-flex align-items-center card-large" *ngSwitchCase="'large'"  >
+        <img class="mr-0" src="../../../assets/icons/apps/{{icon}}.svg" alt="app">
+        <div  class="opacity-8 h5 mr-0 card-large-value " >{{value}}</div>
+      </section>
+    </ng-container>
+
 
     <section  class="caption opacity-4" >
       {{caption}}
     </section>
   </div>
 
-  <img class="card-background-image" src="../../../assets/icons/outline/outline-{{icon}}.svg" alt="decorador" >
+  <img class="card-background-image" *ngIf="backgroundIcon" src="../../../assets/icons/outline/outline-{{backgroundIcon}}.svg" alt="decorador" >
 
 </section>

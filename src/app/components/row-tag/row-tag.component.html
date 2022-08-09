@@ -1,0 +1,15 @@
+<div class="mt-1"  >
+  <div class="text-3 mb-8 font-weight-bold" >
+    {{tittle}}
+  </div>
+
+  <div class="d-flex align-items-center  gap-flex-10"  >
+    <app-tag
+      class="flex-1"
+      *ngFor="let item of listTags"
+
+      [type]="item.type"
+      [value]="item.value"
+    ></app-tag>
+  </div>
+</div>

@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.flex-1{
+  flex: 1;
+}
+
 /*Direction*/
 
 .flex-row{
@@ -95,4 +99,14 @@
 
 .align-self-stretch{
   align-self: stretch;
+}
+
+/*Gap*/
+
+.gap-flex-32{
+  gap: 2rem;
+}
+
+.gap-flex-10{
+  gap: 10px;
 }

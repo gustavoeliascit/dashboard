@@ -1,0 +1,67 @@
+<aside  class="pl-2 pt-1 d-flex flex-column gap-flex-32 bg-DP02 pt-2 pr-1 h-100vh border-left" >
+
+  <!--Timer-->
+  <app-timer></app-timer>
+
+  <!--Cards-->
+  <section class="grid-4" >
+    <app-card
+      [tittle]="'HORAS TRABAJADAS'"
+      [value]="'50%'"
+      [porcent]="'-25%'"
+      [caption]="'Total Dia Activo'"
+      [backgroundIcon]="'stopwatch'"
+      [icon]="'down'"
+      [size]="'small'"
+    ></app-card>
+    <app-card
+      [tittle]="'Productividad'"
+      [value]="'52%'"
+      [porcent]="'-25%'"
+      [caption]="'Total Dia Activo'"
+      [backgroundIcon]="'show-chart'"
+      [icon]="'down'"
+      [size]="'small'"
+    ></app-card>
+    <app-card
+      [tittle]="'HORAS TRABAJADAS'"
+      [value]="'Visual studio code'"
+      [porcent]="'-25%'"
+      [caption]="'Total Dia Activo'"
+      [icon]="'vs-code'"
+      [size]="'large'"
+    ></app-card>
+    <app-card
+      [tittle]="'Presup. HRS del dia'"
+      [value]="'80/184'"
+      [caption]="'Dia Activo Live'"
+      [backgroundIcon]="'cash'"
+      [icon]="'warning'"
+    ></app-card>
+  </section>
+
+  <!--Chart-->
+
+  <!--Leyendas-->
+  <section>
+    <div class="h6 pb-0 border-bottom"  >
+      Leyenda de información
+    </div>
+
+    <app-row-tag
+      [tittle]="'Actividad'"
+      [listTags]="actividadesList"
+    ></app-row-tag>
+
+    <app-row-tag
+      [tittle]="'Horas'"
+      [listTags]="horasList"
+    ></app-row-tag>
+
+    <app-row-tag
+      [tittle]="'Semanal'"
+      [listTags]="semanalList"
+    ></app-row-tag>
+
+  </section>
+</aside>
