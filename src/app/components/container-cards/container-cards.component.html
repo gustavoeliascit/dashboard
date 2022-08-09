@@ -1,0 +1,20 @@
+<div  #containerCards
+      class="mt-2 mb-2 d-flex container-cards shadow-medium--inner"
+      (pointerdown)="dragCards($event)"
+      (mouseleave)="dragLeave()"
+      (mouseup)="dragUp()"
+      (mousemove)="dragMove($event)">
+
+  <app-card
+     *ngFor="let card of listCard"
+
+    class="mr-1"
+    [tittle]="card.tittle"
+    [value]="card.value"
+    [porcent]="card.porcent"
+    [caption]="card.caption"
+    [icon]="card.icon"
+    [growt]="card.growt"
+  ></app-card>
+
+</div>

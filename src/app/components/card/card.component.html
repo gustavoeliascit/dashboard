@@ -1,0 +1,23 @@
+<section  class="p-1 rounded border colab card users card-shadow" >
+
+  <div>
+    <section class="mb-0 text-size-4 font-weight-bold text-uppercase card-tittle " >
+      {{tittle}}
+    </section>
+
+    <section class="d-flex align-items-center" >
+      <div  class="opacity-8 h1 mr-0" >{{value}}</div>
+      <img class="mr-0" src="../../../assets/icons/growt/growt-{{growt}}.svg" alt="signal">
+      <div *ngIf="porcent" class="opacity-8" >
+        ({{porcent}})
+      </div>
+    </section>
+
+    <section  class="caption opacity-4" >
+      {{caption}}
+    </section>
+  </div>
+
+  <img class="card-background-image" src="../../../assets/icons/outline/outline-{{icon}}.svg" alt="decorador" >
+
+</section>
