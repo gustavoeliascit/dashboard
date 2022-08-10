@@ -11,9 +11,10 @@ import { ChartHorizontalBarsComponent } from './chart/chart-horizontal-bars/char
 import { HorizontalBarComponent } from './chart/horizontal-bar/horizontal-bar.component';
 import { TableHeadComponent } from './table/table-head/table-head.component';
 import { TableBodyComponent } from './table/table-body/table-body.component';
+import { TemporizadorComponent } from './temporizador/temporizador.component';
 
 @NgModule({
-  declarations: [TopHeaderComponent, CardComponent, ContainerCardsComponent, AsideComponent, TimerComponent, TagComponent, RowTagComponent, ChartHorizontalBarsComponent, HorizontalBarComponent, TableHeadComponent, TableBodyComponent],
+  declarations: [TopHeaderComponent, CardComponent, ContainerCardsComponent, AsideComponent, TimerComponent, TagComponent, RowTagComponent, ChartHorizontalBarsComponent, HorizontalBarComponent, TableHeadComponent, TableBodyComponent, TemporizadorComponent],
   imports: [
     CommonModule
   ],

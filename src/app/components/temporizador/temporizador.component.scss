@@ -1,0 +1,29 @@
+@import '../../../scss/colors';
+
+.temporizador{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.circular-progress{
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: $gradient-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 3.4rem;
+  width: 3.4rem;
+  border-radius: 50%;
+  background-color: $bg-DP03;
+}
+.progress-value{
+  position: relative;
+
+}
