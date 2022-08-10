@@ -1,0 +1,33 @@
+@import './borders';
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+
+  border: 0px;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  border-spacing: 0px !important;
+  border-collapse: collapse;
+}
+
+tr{
+  border-bottom: $border-style;
+}
+
+th{
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+.row th{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+tbody{
+  border-radius: 16px !important;
+}

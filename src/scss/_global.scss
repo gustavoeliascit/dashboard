@@ -6,9 +6,15 @@
 @import './layout';
 @import './effects';
 @import './grid';
+@import './tables';
 
 html, body{
   font-family: $font-family;
   background-color: $bg-DP01;
   color: $neutral-white;
+}
+
+body{
+  display: flex;
+  justify-content: center;
 }

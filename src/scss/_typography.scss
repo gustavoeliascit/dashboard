@@ -35,6 +35,18 @@ $font-family: 'Inter', sans-serif;
   text-align:end;
 }
 
+.text-left{
+  text-align: left;
+}
+
+/*------------------Text overflow------------------*/
+
+.text-overflow{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*------------------Break points------------------*/
 @mixin sm-font-size {
   @media (min-width: 768px) {

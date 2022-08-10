@@ -1,13 +1,27 @@
 <div class="pl-1 pr-1 container" >
 
   <div class="grid" >
+
+    <!--Content-->
     <section class="col" >
 
+      <!--Top Header-->
       <app-top-header  class="row" ></app-top-header>
-
+      <!--Cards-->
       <app-container-cards class="row" ></app-container-cards>
+
+      <!--Tabla-->
+      <section class="rounded border w-100">
+
+        <app-table-head
+          [tittle]="'Leaderboards'"
+        ></app-table-head>
+        <app-table-body></app-table-body>
     </section>
 
+    </section>
+
+    <!--Aside-->
     <section class="col" >
       <app-aside></app-aside>
     </section>

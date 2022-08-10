@@ -9,9 +9,11 @@ import { TagComponent } from './tag/tag.component';
 import { RowTagComponent } from './row-tag/row-tag.component';
 import { ChartHorizontalBarsComponent } from './chart/chart-horizontal-bars/chart-horizontal-bars.component';
 import { HorizontalBarComponent } from './chart/horizontal-bar/horizontal-bar.component';
+import { TableHeadComponent } from './table/table-head/table-head.component';
+import { TableBodyComponent } from './table/table-body/table-body.component';
 
 @NgModule({
-  declarations: [TopHeaderComponent, CardComponent, ContainerCardsComponent, AsideComponent, TimerComponent, TagComponent, RowTagComponent, ChartHorizontalBarsComponent, HorizontalBarComponent],
+  declarations: [TopHeaderComponent, CardComponent, ContainerCardsComponent, AsideComponent, TimerComponent, TagComponent, RowTagComponent, ChartHorizontalBarsComponent, HorizontalBarComponent, TableHeadComponent, TableBodyComponent],
   imports: [
     CommonModule
   ],
@@ -19,7 +21,9 @@ import { HorizontalBarComponent } from './chart/horizontal-bar/horizontal-bar.co
     TopHeaderComponent,
     CardComponent,
     ContainerCardsComponent,
-    AsideComponent
+    AsideComponent,
+    TableHeadComponent,
+    TableBodyComponent
   ]
 })
 export class ComponentsModule { }
