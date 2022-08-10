@@ -1,0 +1,64 @@
+<section class="d-flex flex-column w-100 p-relative" >
+
+  <!--Background dashed-->
+  <section class="chart-background"  >
+    <div class="chart-background-line" ></div>
+    <div class="chart-background-line" ></div>
+    <div class="chart-background-line" ></div>
+    <div class="chart-background-line" ></div>
+  </section>
+
+  <!--Bars-->
+  <div  class="flex-1 d-flex flex-column chart-horizontak-background" >
+
+
+    <app-horizontal-bar
+      [tittle]="'YALO'"
+      [time]="'35'"
+      [value]="'70'"
+      [growtIcon]="'middle'">
+    </app-horizontal-bar>
+
+    <app-horizontal-bar
+      [tittle]="'Bip Bip'"
+      [time]="'20'"
+      [value]="'60'"
+      [growtIcon]="'down'">
+    </app-horizontal-bar>
+
+    <app-horizontal-bar
+      [tittle]="'Emsula'"
+      [time]="'20'"
+      [value]="'60'"
+      [growtIcon]="'up'">
+    </app-horizontal-bar>
+
+    <app-horizontal-bar
+      [tittle]="'Dokto'"
+      [time]="'10'"
+      [value]="'40'"
+      [growtIcon]="'up'">
+    </app-horizontal-bar>
+
+
+  </div>
+
+  <!--Footer HRS-->
+  <div class="d-flex w-100" >
+    <span class="font-weight-bold mr-1 chart-horizontal-bars-footer-legend opacity-8" >HRS</span>
+    <span class="d-flex justify-content-between flex-1 opacity-4" >
+      <span>01</span>
+      <span>04</span>
+      <span>08</span>
+      <span>12</span>
+      <span>16</span>
+      <span>20</span>
+      <span>24</span>
+      <span>28</span>
+      <span>38</span>
+      <span>32</span>
+      <span>40</span>
+      <span>35</span>
+    </span>
+  </div>
+</section>

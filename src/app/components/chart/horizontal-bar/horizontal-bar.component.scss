@@ -1,0 +1,26 @@
+@import '../../../../scss/colors';
+
+.horizontal-bar{
+  z-index: 8 !important;
+}
+
+.progressbar{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: baseline;
+  border-radius: 14px;
+}
+
+//bg
+.progressbar::-webkit-progress-bar{
+  background-color: $bg-DP04;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+}
+
+//
+.progressbar::-webkit-progress-value{
+  background: $gradient-purple;
+  border-radius: 14px;
+}

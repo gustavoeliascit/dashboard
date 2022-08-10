@@ -7,9 +7,11 @@ import { AsideComponent } from './aside/aside.component';
 import { TimerComponent } from './timer/timer.component';
 import { TagComponent } from './tag/tag.component';
 import { RowTagComponent } from './row-tag/row-tag.component';
+import { ChartHorizontalBarsComponent } from './chart/chart-horizontal-bars/chart-horizontal-bars.component';
+import { HorizontalBarComponent } from './chart/horizontal-bar/horizontal-bar.component';
 
 @NgModule({
-  declarations: [TopHeaderComponent, CardComponent, ContainerCardsComponent, AsideComponent, TimerComponent, TagComponent, RowTagComponent],
+  declarations: [TopHeaderComponent, CardComponent, ContainerCardsComponent, AsideComponent, TimerComponent, TagComponent, RowTagComponent, ChartHorizontalBarsComponent, HorizontalBarComponent],
   imports: [
     CommonModule
   ],

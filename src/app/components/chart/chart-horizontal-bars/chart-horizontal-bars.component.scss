@@ -1,0 +1,27 @@
+$dashed-border: 2px dashed rgba(255, 255, 255, 0.1);
+$solid-border: 2px solid rgba(255, 255, 255, 0.1);
+
+.chart-horizontal-bars-footer-legend{
+  width: 3rem;
+}
+
+.chart-horizontak-background{
+  z-index: 10;
+}
+
+.chart-background{
+  display: flex;
+  justify-content: space-between;
+  height: 16rem;
+  width: calc(100% - 4rem);
+  right: 0;
+  z-index: 2 !important;
+  position: absolute;
+  border-bottom: $solid-border;
+}
+
+.chart-background-line{
+  border-left: $dashed-border;
+  height: auto;
+  z-index: -4;
+}

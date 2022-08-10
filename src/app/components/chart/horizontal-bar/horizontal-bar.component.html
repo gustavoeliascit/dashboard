@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center w-100 mb-1 horizontal-bar" >
+  <img src="../../../../assets/icons/growt/neutral-colors/growt-{{growtIcon}}.svg" alt="grow">
+
+  <div class="ml-1 flex-1" >
+    <!--Header info-->
+    <section class="d-flex align-items-center justify-content-between mb-10" >
+      <div class="text-3 opacity-8" >{{tittle}}</div>
+
+      <div class="text-3 opacity-8" >{{time}} hrs</div>
+    </section>
+
+    <!--Progress bar-->
+    <section class="w-100" >
+      <progress class="w-100 progressbar" [value]="value" max="100">{{value}}%</progress>
+    </section>
+  </div>
+</div>

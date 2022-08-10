@@ -24,7 +24,7 @@
 
 .card-large{
   padding-top: 4px;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 
   .card-large-value{
     height: 3rem;
@@ -33,12 +33,3 @@
     text-overflow: ellipsis;
   }
 }
-
-/* .users{
-  background-image: url('../../../assets/icons/outline/outline-users.svg');
-  background-position:  bottom right;
-  background-repeat: no-repeat;
-  background-position-y: ;
-  z-index: 3;
-  background-size: 120px 120px;
-} */
