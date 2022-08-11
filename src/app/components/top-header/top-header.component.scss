@@ -1,0 +1,13 @@
+@import '../../../scss/breakpoints';
+
+.btn-aside{
+  display: none;
+
+  @include media-breakpoint("xs") {
+    display: flex;
+  }
+
+  @include media-breakpoint("sm") {
+    display: flex;
+  }
+}

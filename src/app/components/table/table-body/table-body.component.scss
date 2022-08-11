@@ -6,9 +6,20 @@ tbody > tr:last-child > th:first-child{
   border-bottom-left-radius: 16px !important;
 }
 
+th{
+  margin-left: 1rem !important;
+}
 
 tr{
   border-bottom: none!important;
   border-left: none!important;
   border-right: none!important;
 }
+
+
+.icon-arrow {
+  height: 14px;
+  margin-left: 1rem;
+}
+
+

@@ -4,30 +4,30 @@
     <tr >
       <th  >N°</th>
       <th class="text-left ">
-        <div class="text-overflow" >
+        <div class="text-overflow text-size-4 " >
           nombre del colaborador
         </div>
       </th>
       <th class="text-left ">
-        <div class="d-flex align-items-center" >
-          <img class="mr-4" src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
-          <div class="text-overflow" >
+        <div class="d-flex text-overflow align-items-center" >
+          <img class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
+          <div class="text-overflow text-size-4 " >
             promed. activ.
           </div>
         </div>
       </th>
       <th class="text-left ">
         <div class="d-flex align-items-center" >
-          <img class="mr-4" src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
-          <div class="text-overflow" >
+          <img class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
+          <div class="text-overflow text-size-4 " >
             PROMED. HORAS
           </div>
         </div>
       </th>
       <th class="text-left ">
         <div class="d-flex align-items-center" >
-          <img class="mr-4" src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
-          <div class="text-overflow" >
+          <img class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
+          <div class="text-overflow text-size-4 " >
             HORAS SEMANALES
           </div>
         </div>
@@ -36,38 +36,38 @@
   </thead>
   <tbody  >
     <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
-      <th class=" text-3 font-weight-regular  bg-DP03 " >
+      <th class=" text-size-3 font-weight-regular  " >
         {{  i <= 8 ? ('0' + (i+1)) : i+1}}
       </th>
 
-      <td class=" text-3 text-uppercase " >
-        <div class="text-overflow" >
+      <td class=" text-size-3 text-uppercase " >
+        <div class="text-overflow text-size-4 " >
           {{item.nombre}}
         </div>
       </td>
 
-      <td class=" text-3 text-uppercase  " >
+      <td class=" text-size-3 text-uppercase  " >
         <div class="d-flex align-items-center justify-content-start" >
-          <img class="mr-10" src="../../../../../assets/icons/status/status-check.svg" alt="status-icon">
-          <div class="text-overflow" >
+          <img class="mr-10 ml-1" src="../../../../../assets/icons/status/status-check.svg" alt="status-icon">
+          <div class="text-overflow text-size-4 " >
             {{item.actividad}}
           </div>
         </div>
       </td>
 
-      <td class=" text-3 text-uppercase  " >
+      <td class=" text-size-3 text-uppercase  " >
         <div class="d-flex align-items-center justify-content-start" >
-          <img class="mr-10" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
-          <div class="text-overflow" >
+          <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+          <div class="text-overflow text-size-4 " >
             {{item.horas}}
           </div>
         </div>
       </td>
 
-      <td class=" text-3 text-uppercase  " >
+      <td class=" text-size-3 text-uppercase  " >
         <div class="d-flex align-items-center justify-content-start" >
-          <img class="mr-10" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
-          <div class="text-overflow" >
+          <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+          <div class="text-overflow text-size-4 " >
             {{item.semanales}}
           </div>
         </div>

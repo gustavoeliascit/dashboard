@@ -1,4 +1,5 @@
 @import './borders';
+@import './colors';
 
 table, caption, tbody, tfoot, thead, tr, th, td {
 
@@ -13,6 +14,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 tr{
   border-bottom: $border-style;
+}
+
+tbody tr:hover{
+  background-color: $bg-DP01;
 }
 
 th{
@@ -31,3 +36,10 @@ th{
 tbody{
   border-radius: 16px !important;
 }
+
+.table{
+  overflow: auto;
+  width: 100%;
+}
+
+

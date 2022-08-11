@@ -1,0 +1,7 @@
+@import '../../../../scss/breakpoints';
+
+.table-head-label{
+  @include media-breakpoint("xs"){
+    width: 2rem;
+  }
+}

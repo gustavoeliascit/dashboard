@@ -1,4 +1,10 @@
-<section class="pt-1 d-flex align-items-center" >
-  <app-temporizador></app-temporizador>
-  <img class="img-logo" src="../../../assets/logos/logo-creative.svg" alt="logo-cit">
+<section class="pt-1 d-flex align-items-center justify-content-between" >
+  <div class="d-flex align-items-center" >
+    <app-temporizador></app-temporizador>
+    <img class="img-logo" src="../../../assets/logos/logo-creative.svg" alt="logo-cit">
+  </div>
+
+  <div class="btn-aside" >
+    <img (click)="openAside()" class="icon" src="../../../assets/icons/outline/system/bar-right.svg" alt="burger" srcset="">
+  </div>
 </section>

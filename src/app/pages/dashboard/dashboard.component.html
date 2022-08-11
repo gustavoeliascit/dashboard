@@ -1,4 +1,4 @@
-<div class="pl-1 pr-1 container" >
+<div class="pl-1 pr-1 pb-sm-1 pb-xs-1 container" >
 
   <div class="grid" >
 
@@ -11,18 +11,18 @@
       <app-container-cards class="row" ></app-container-cards>
 
       <!--Tabla-->
-      <section class="rounded border w-100">
+      <section class=" rounded border w-100 d-flex flex-column">
 
         <app-table-head
           [tittle]="'Leaderboards'"
-        ></app-table-head>
-        <app-table-body></app-table-body>
+        ></app-table-head >
+        <app-table-body class="table" ></app-table-body>
     </section>
 
     </section>
 
     <!--Aside-->
-    <section class="col" >
+    <section >
       <app-aside></app-aside>
     </section>
   </div>

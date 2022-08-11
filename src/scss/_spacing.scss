@@ -1,4 +1,4 @@
-
+@import './breakpoints';
 /*Padding*/
 .p-0{
   padding: 12px;
@@ -38,6 +38,18 @@
 
 .p-1{
   padding: 1rem;
+}
+
+.pb-sm-1{
+  @include media-breakpoint("sm") {
+    padding-bottom: 1rem;
+  }
+}
+
+.pb-xs-1{
+  @include media-breakpoint("xs") {
+    padding-bottom: 1rem;
+  }
 }
 
 .pt-1{

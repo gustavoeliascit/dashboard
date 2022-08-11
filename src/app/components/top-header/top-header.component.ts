@@ -12,4 +12,10 @@ export class TopHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openAside(){
+
+    let aside = document.querySelector<HTMLElement>('.aside') ;
+    aside!.classList!.toggle('open-aside');
+  }
+
 }

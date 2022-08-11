@@ -30,4 +30,13 @@ export class AsideComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeAside(event:Event){
+    let id = (<HTMLElement>event.target).id;
+    if(id === 'layoutAside'){
+
+      let aside = document.querySelector<HTMLElement>('.aside') ;
+      aside!.classList!.toggle('open-aside');
+    }
+  }
+
 }
