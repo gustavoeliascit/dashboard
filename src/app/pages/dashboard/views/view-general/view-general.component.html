@@ -1,0 +1,32 @@
+<div class="grid" >
+
+  <!--Content-->
+
+  <section class="col pb-1" >
+
+    <!--Top Header-->
+    <app-top-header  class="row" ></app-top-header>
+    <!--Cards-->
+    <app-container-cards class="row" ></app-container-cards>
+
+    <!--Tabla-->
+    <div class=" rounded border w-100 d-flex flex-column">
+
+      <app-table-head
+        [tittle]="'Leaderboards'"
+      ></app-table-head >
+      <app-table-body class="table"
+        [listData]="listData"
+        [columnsName]="columnsName"
+
+      ></app-table-body>
+    </div>
+
+  </section>
+
+  <!--Aside-->
+  <section >
+    <app-aside
+    ></app-aside>
+  </section>
+</div>
