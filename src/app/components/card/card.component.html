@@ -16,14 +16,14 @@
 
       <section class="d-flex align-items-center" *ngSwitchCase="'small'"  >
         <div  class="opacity-8 h5 mr-0" >{{value}}</div>
-        <img class="mr-0" src="../../../assets/icons/growt/growt-{{icon}}.svg" alt="signal">
+        <img *ngIf="icon" class="mr-0" src="../../../assets/icons/growt/growt-{{icon}}.svg" alt="signal">
         <div *ngIf="porcent" class="opacity-8" >
           ({{porcent}})
         </div>
       </section>
 
       <section class="d-flex align-items-center card-large" *ngSwitchCase="'large'"  >
-        <img class="mr-0" src="../../../assets/icons/apps/{{icon}}.svg" alt="app">
+        <img  class="mr-0" src="../../../assets/icons/apps/{{icon}}.svg" alt="app">
         <div  class="opacity-8 h5 mr-0 card-large-value " >{{value}}</div>
       </section>
     </ng-container>

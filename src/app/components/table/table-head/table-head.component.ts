@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TableHeadComponent implements OnInit {
 
   @Input() tittle:string = '';
+  @Input() loadState:boolean = true;
+  @Input() icon:string = '';
+
 
   constructor() { }
 

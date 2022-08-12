@@ -1,83 +1,212 @@
-<aside  class="aside pl-2 pt-1 d-flex flex-column bg-DP02 pr-1 pb-2 border-left" >
+<aside [ngSwitch]="type" [ngClass]="{'border-left bg-DP02': type === 'general'}" class="bg-DP01 aside pl-2 pt-1 d-flex flex-column  pr-1 pb-2 " >
   <div  class="btn-aside mb-1 align-self-end" >
     <img id="layoutAside" (click)="closeAside($event)"  src="../../../assets/icons/outline/user-interface/outline-close.svg" alt="close" >
   </div>
 
-  <!--Content-->
-  <section class="d-flex flex-column gap-flex-32" >
+  <!--General-->
+  <section  class="d-flex flex-column gap-flex-32" >
     <!--Timer-->
     <app-timer></app-timer>
 
-    <!--Cards-->
-    <section class="grid-4 aside-cards" >
-      <app-card
-        [tittle]="'HORAS TRABAJADAS'"
-        [value]="'50%'"
-        [porcent]="'-25%'"
-        [caption]="'Total Dia Activo'"
-        [backgroundIcon]="'stopwatch'"
-        [icon]="'down'"
-        [size]="'small'"
-      ></app-card>
-      <app-card
-        [tittle]="'Productividad'"
-        [value]="'52%'"
-        [porcent]="'-25%'"
-        [caption]="'Total Dia Activo'"
-        [backgroundIcon]="'show-chart'"
-        [icon]="'down'"
-        [size]="'small'"
-      ></app-card>
-      <app-card
-        [tittle]="'HORAS TRABAJADAS'"
-        [value]="'Visual studio code'"
-        [porcent]="'-25%'"
-        [caption]="'Total Dia Activo'"
-        [icon]="'vs-code'"
-        [size]="'large'"
-      ></app-card>
-      <app-card
-        [tittle]="'Presup. HRS del dia'"
-        [value]="'80/184'"
-        [caption]="'Dia Activo Live'"
-        [backgroundIcon]="'cash'"
-        [icon]="'warning'"
-      ></app-card>
-    </section>
+    <!--General aside info-->
+    <ng-container *ngSwitchCase="'general'" >
+      <!--Cards-->
+      <section class="grid-4 aside-cards" >
+        <app-card
+          [tittle]="'HORAS TRABAJADAS'"
+          [value]="'50%'"
+          [porcent]="'-25%'"
+          [caption]="'Total Dia Activo'"
+          [backgroundIcon]="'stopwatch'"
+          [icon]="'down'"
+          [size]="'small'"
+        ></app-card>
+        <app-card
+          [tittle]="'Productividad'"
+          [value]="'52%'"
+          [porcent]="'-25%'"
+          [caption]="'Total Dia Activo'"
+          [backgroundIcon]="'show-chart'"
+          [icon]="'down'"
+          [size]="'small'"
+        ></app-card>
+        <app-card
+          [tittle]="'HORAS TRABAJADAS'"
+          [value]="'Visual studio code'"
+          [porcent]="'-25%'"
+          [caption]="'Total Dia Activo'"
+          [icon]="'vs-code'"
+          [size]="'large'"
+        ></app-card>
+        <app-card
+          [tittle]="'Presup. HRS del dia'"
+          [value]="'80/184'"
+          [caption]="'Dia Activo Live'"
+          [backgroundIcon]="'cash'"
+          [icon]="'warning'"
+        ></app-card>
+      </section>
 
-    <!--Chart-->
-    <section>
-      <div class="h6 pb-0 border-bottom mb-24"  >
-        Horas por Proyecto Semanal
-      </div>
+      <!--Chart-->
+      <section>
+        <div class="h6 pb-0 border-bottom mb-24"  >
+          Horas por Proyecto Semanal
+        </div>
 
-      <app-chart-horizontal-bars>
+        <app-chart-horizontal-bars>
 
-      </app-chart-horizontal-bars>
+        </app-chart-horizontal-bars>
 
-    </section>
+      </section>
 
-    <!--Leyendas-->
-    <section>
-      <div class="h6 pb-0 border-bottom"  >
-        Leyenda de información
-      </div>
+      <!--Leyendas-->
+      <section>
+        <div class="h6 pb-0 border-bottom"  >
+          Leyenda de información
+        </div>
 
-      <app-row-tag
-        [tittle]="'Actividad'"
-        [listTags]="actividadesList"
-      ></app-row-tag>
+        <app-row-tag
+          [tittle]="'Actividad'"
+          [listTags]="actividadesList"
+        ></app-row-tag>
 
-      <app-row-tag
-        [tittle]="'Horas'"
-        [listTags]="horasList"
-      ></app-row-tag>
+        <app-row-tag
+          [tittle]="'Horas'"
+          [listTags]="horasList"
+        ></app-row-tag>
 
-      <app-row-tag
-        [tittle]="'Semanal'"
-        [listTags]="semanalList"
-      ></app-row-tag>
+        <app-row-tag
+          [tittle]="'Semanal'"
+          [listTags]="semanalList"
+        ></app-row-tag>
 
-    </section>
+      </section>
+    </ng-container>
+
+
+    <!--Areas aside-->
+    <ng-container *ngSwitchCase="'areas'" >
+      <section class="rounded border" >
+        <app-table-head
+          [tittle]="'Top Leaderboard'"
+          [loadState]="false"
+          [icon]="'cup'"
+        ></app-table-head>
+        <app-table-body
+          [listData]="tableBoardData"
+          [columnsName]="columnsBoardData"
+          [typeTable]="'activity'"
+        ></app-table-body>
+      </section>
+
+      <section class="rounded border" >
+        <app-table-head
+          [tittle]="'Bottomboard'"
+          [loadState]="false"
+          [icon]="'exclamation-mark'"
+        ></app-table-head>
+        <app-table-body
+          [listData]="tableBoardData"
+          [columnsName]="columnsBoardData"
+          [typeTable]="'activity'"
+        ></app-table-body>
+      </section>
+
+      <!---->
+      <section class="rounded border" >
+        <app-table-head
+          [tittle]="'No Tracking Data Today'"
+          [loadState]="false"
+          [icon]="'exclamation-mark-warning'"
+        ></app-table-head>
+        <app-table-body
+          [listData]="tableDateData"
+          [columnsName]="columnsDateData"
+          [typeTable]="'date'"
+        ></app-table-body>
+      </section>
+    </ng-container>
+
+    <!--clientes-->
+    <ng-container *ngSwitchCase="'clientes'" >
+      <!--Cards-->
+      <section class="grid-4 aside-cards" >
+        <app-card
+          [tittle]="'Proyectos (Sem.)'"
+          [value]="'10'"
+          [porcent]="'+05%'"
+          [caption]="'Activos Semana a la fecha'"
+          [backgroundIcon]="'approve-flie'"
+          [icon]="'up'"
+          [size]="'small'"
+        ></app-card>
+        <app-card
+          [tittle]="'Proyectos (Mes)'"
+          [value]="'45'"
+          [porcent]="'-25%'"
+          [caption]="'Activos Mes a la fecha'"
+          [backgroundIcon]="'approve-flie'"
+          [icon]="'down'"
+          [size]="'small'"
+        ></app-card>
+        <app-card
+          [tittle]="'Activ. Diaria Avg.'"
+          [value]="'52%'"
+          [porcent]="'-12%'"
+          [caption]="'Semana a la fecha'"
+          [backgroundIcon]="'pie-chart'"
+          [icon]="'middle'"
+          [size]="'small'"
+        ></app-card>
+        <app-card
+          [tittle]="'Proyecto Más Hrs'"
+          [value]="'Yalo Techno...'"
+          [porcent]="''"
+          [caption]="'Semana a la fecha'"
+          [backgroundIcon]="'watch-card'"
+          [size]="'small'"
+        ></app-card>
+      </section>
+
+      <section class="rounded border" >
+        <app-table-head
+          [tittle]="'Proyectos con Baja Actividad'"
+          [loadState]="false"
+          [icon]="'exclamation-mark'"
+        ></app-table-head>
+
+        <app-table-body
+          [listData]="tableClientData"
+          [columnsName]="columnsClientData"
+          [typeTable]="'project'"
+        ></app-table-body>
+      </section>
+
+      <!--Leyendas-->
+      <section>
+        <div class="h6 pb-0 border-bottom"  >
+          Leyenda de información
+        </div>
+
+        <app-row-tag
+          [tittle]="'Actividad'"
+          [listTags]="actividadesList"
+        ></app-row-tag>
+
+        <app-row-tag
+          [tittle]="'Horas'"
+          [listTags]="horasList"
+        ></app-row-tag>
+
+        <app-row-tag
+          [tittle]="'Semanal'"
+          [listTags]="semanalList"
+        ></app-row-tag>
+
+      </section>
+    </ng-container>
+
+
   </section>
+
 </aside>

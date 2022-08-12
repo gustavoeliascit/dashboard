@@ -2,77 +2,150 @@
 
   <thead class=" text-uppercase border ">
     <tr >
-      <th  >N°</th>
-      <th class="text-left ">
-        <div class="text-overflow text-size-4 " >
-          nombre del colaborador
-        </div>
-      </th>
-      <th class="text-left ">
-        <div class="d-flex text-overflow align-items-center" >
-          <img class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
-          <div class="text-overflow text-size-4 " >
-            promed. activ.
+      <th class="vertical-align-middle"  >N°</th>
+
+      <ng-container  *ngFor="let column of columnsName" >
+        <th class="text-left vertical-align-middle">
+          <div class="d-flex  align-items-center" >
+            <img  *ngIf="column.icon" class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
+            <div class=" text-size-4 " [ngStyle]="{'width': typeTable === 'date' ? '5rem' : 'auto' }"  >
+              {{column.name}}
+            </div>
           </div>
-        </div>
-      </th>
-      <th class="text-left ">
-        <div class="d-flex align-items-center" >
-          <img class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
-          <div class="text-overflow text-size-4 " >
-            PROMED. HORAS
-          </div>
-        </div>
-      </th>
-      <th class="text-left ">
-        <div class="d-flex align-items-center" >
-          <img class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
-          <div class="text-overflow text-size-4 " >
-            HORAS SEMANALES
-          </div>
-        </div>
-      </th>
+        </th>
+      </ng-container>
+
     </tr>
   </thead>
-  <tbody  >
-    <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
-      <th class=" text-size-3 font-weight-regular  " >
-        {{  i <= 8 ? ('0' + (i+1)) : i+1}}
-      </th>
 
-      <td class=" text-size-3 text-uppercase " >
-        <div class="text-overflow text-size-4 " >
-          {{item.nombre}}
-        </div>
-      </td>
+  <tbody [ngSwitch]="typeTable" >
+    <!--Default-->
+    <ng-container  *ngSwitchCase="'default'" >
+      <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
+        <th class=" text-size-3 font-weight-regular  " >
+          {{  i <= 8 ? ('0' + (i+1)) : i+1}}
+        </th>
 
-      <td class=" text-size-3 text-uppercase  " >
-        <div class="d-flex align-items-center justify-content-start" >
-          <img class="mr-10 ml-1" src="../../../../../assets/icons/status/status-check.svg" alt="status-icon">
+        <td class=" text-size-3 " >
           <div class="text-overflow text-size-4 " >
-            {{item.actividad}}
+            {{item.nombre}}
           </div>
-        </div>
-      </td>
+        </td>
 
-      <td class=" text-size-3 text-uppercase  " >
-        <div class="d-flex align-items-center justify-content-start" >
-          <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <img class="mr-10 ml-1" src="../../../../../assets/icons/status/status-check.svg" alt="status-icon">
+            <div class="text-overflow text-size-4 " >
+              {{item.actividad}}
+            </div>
+          </div>
+        </td>
+
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+            <div class="text-overflow text-size-4 " >
+              {{item.horas}}
+            </div>
+          </div>
+        </td>
+
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+            <div class="text-overflow text-size-4 " >
+              {{item.semanales}}
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+
+    <!--Activity-->
+    <ng-container  *ngSwitchCase="'activity'" >
+      <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
+        <th class=" text-size-3 font-weight-regular  " >
+          {{  i <= 8 ? ('0' + (i+1)) : i+1}}
+        </th>
+
+        <td class=" text-size-3 " >
           <div class="text-overflow text-size-4 " >
-            {{item.horas}}
+            {{item.nombre}}
           </div>
-        </div>
-      </td>
+        </td>
 
-      <td class=" text-size-3 text-uppercase  " >
-        <div class="d-flex align-items-center justify-content-start" >
-          <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
-          <div class="text-overflow text-size-4 " >
-            {{item.semanales}}
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <div class="text-overflow text-size-4 " >
+              {{item.actividad}}
+            </div>
           </div>
-        </div>
-      </td>
-    </tr>
+        </td>
 
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <div class="text-overflow text-size-4 " >
+              {{item.horas}}
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+
+    <!--Date-->
+    <ng-container  *ngSwitchCase="'date'" >
+      <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
+        <th class=" text-size-3 font-weight-regular  " >
+          {{  i <= 8 ? ('0' + (i+1)) : i+1}}
+        </th>
+
+        <td class=" text-size-3 " >
+          <div class="text-size-4 " >
+            {{item.nombre}}
+          </div>
+        </td>
+
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <div class="text-size-4 " >
+              {{item.date}}
+            </div>
+          </div>
+        </td>
+
+        <td class=" text-size-3  " >
+          <div class="d-flex align-items-center justify-content-start" >
+            <div class="text-size-4 " >
+              {{item.time}}
+            </div>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+
+    <!--Proyect-->
+    <ng-container  *ngSwitchCase="'project'" >
+      <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
+        <th class=" text-size-3 font-weight-regular  " >
+          {{  i <= 8 ? ('0' + (i+1)) : i+1}}
+        </th>
+
+        <td class=" text-size-3 " >
+          <div class="text-size-4 " >
+            {{item.nombre}}
+          </div>
+        </td>
+
+        <td class=" text-size-3  d-flex align-items-center" >
+          <img class="mr-10" src="../../../../../assets/icons/status/status-{{item.state}}.svg" alt="status-icon">
+          <div class="d-flex align-items-center justify-content-start" >
+            <div class="text-size-4 " >
+              {{item.activity}}
+            </div>
+          </div>
+        </td>
+
+      </tr>
+    </ng-container>
   </tbody>
 </table>

@@ -3,7 +3,7 @@
   <div class="grid" >
 
     <!--Content-->
-    <section class="col" >
+    <section class="col pb-1" >
 
       <!--Top Header-->
       <app-top-header  class="row" ></app-top-header>
@@ -11,19 +11,52 @@
       <app-container-cards class="row" ></app-container-cards>
 
       <!--Tabla-->
-      <section class=" rounded border w-100 d-flex flex-column">
+      <div class=" rounded border w-100 d-flex flex-column">
 
         <app-table-head
+          [icon]="'cup'"
           [tittle]="'Leaderboards'"
         ></app-table-head >
-        <app-table-body class="table" ></app-table-body>
-    </section>
+        <app-table-body class="table"
+          [listData]="listData"
+          [columnsName]="columnsName"
+
+        ></app-table-body>
+      </div>
+
+      <!--Leyendas-->
+      <div class="mt-2" >
+        <div class="h6 pb-0 border-bottom"  >
+          Leyenda de información
+        </div>
+
+        <section class="grid-2" >
+          <app-row-tag
+            [tittle]="'Actividad'"
+            [listTags]="actividadesList"
+          ></app-row-tag>
+
+          <app-row-tag
+            [tittle]="'Horas'"
+            [listTags]="horasList"
+          ></app-row-tag>
+
+          <div>
+            <app-row-tag
+              [tittle]="'Semanal'"
+              [listTags]="semanalList"
+            ></app-row-tag>
+          </div>
+        </section>
+      </div>
 
     </section>
 
     <!--Aside-->
     <section >
-      <app-aside></app-aside>
+      <app-aside
+        [type]="'clientes'"
+      ></app-aside>
     </section>
   </div>
 </div>

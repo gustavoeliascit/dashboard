@@ -24,7 +24,8 @@ import { TemporizadorComponent } from './temporizador/temporizador.component';
     ContainerCardsComponent,
     AsideComponent,
     TableHeadComponent,
-    TableBodyComponent
+    TableBodyComponent,
+    RowTagComponent
   ]
 })
 export class ComponentsModule { }
