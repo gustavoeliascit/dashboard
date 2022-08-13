@@ -1,5 +1,23 @@
 <div class="pl-1 pr-1 pb-sm-1 pb-xs-1 container" >
 
-  <router-outlet></router-outlet>
+  <section class="grid-layout-columns" >
+    <section class="col grid-layout-rows" >
+
+      <section class="row" >
+        <app-top-header> </app-top-header>
+      </section>
+
+      <section class="row" >
+        <app-view-general></app-view-general>
+      </section>
+
+    </section>
+
+    <section >
+      <app-aside></app-aside>
+    </section>
+  </section>
+
+
 
 </div>

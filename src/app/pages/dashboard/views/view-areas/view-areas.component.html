@@ -1,57 +1,46 @@
-<div class="grid" >
+<section class="col pb-1" >
 
-  <!--Content-->
-  <section class="col pb-1" >
+  <!--Top Header-->
+  <app-top-header  class="row " ></app-top-header>
 
-    <!--Top Header-->
-    <app-top-header  class="row " ></app-top-header>
+  <!--Tabla-->
+  <div class=" rounded mt-4 border w-100 d-flex flex-column">
 
-    <!--Tabla-->
-    <div class=" rounded mt-4 border w-100 d-flex flex-column">
+    <app-table-head
+      [icon]="'computer'"
+      [tittle]="'DEV Team'"
+    ></app-table-head >
+    <app-table-body class="table"
+      [listData]="listData"
+      [columnsName]="columnsName"
 
-      <app-table-head
-        [icon]="'computer'"
-        [tittle]="'DEV Team'"
-      ></app-table-head >
-      <app-table-body class="table"
-        [listData]="listData"
-        [columnsName]="columnsName"
+    ></app-table-body>
+  </div>
 
-      ></app-table-body>
+  <!--Leyendas-->
+  <div class="mt-2" >
+    <div class="h6 pb-0 border-bottom"  >
+      Leyenda de información
     </div>
 
-    <!--Leyendas-->
-    <div class="mt-2" >
-      <div class="h6 pb-0 border-bottom"  >
-        Leyenda de información
+    <section class="grid-2" >
+      <app-row-tag
+        [tittle]="'Actividad'"
+        [listTags]="actividadesList"
+      ></app-row-tag>
+
+      <app-row-tag
+        [tittle]="'Horas'"
+        [listTags]="horasList"
+      ></app-row-tag>
+
+      <div>
+        <app-row-tag
+          [tittle]="'Semanal'"
+          [listTags]="semanalList"
+        ></app-row-tag>
       </div>
+    </section>
+  </div>
 
-      <section class="grid-2" >
-        <app-row-tag
-          [tittle]="'Actividad'"
-          [listTags]="actividadesList"
-        ></app-row-tag>
-
-        <app-row-tag
-          [tittle]="'Horas'"
-          [listTags]="horasList"
-        ></app-row-tag>
-
-        <div>
-          <app-row-tag
-            [tittle]="'Semanal'"
-            [listTags]="semanalList"
-          ></app-row-tag>
-        </div>
-      </section>
-    </div>
-
-  </section>
-
-  <!--Aside-->
-  <section >
-    <app-aside
-      [type]="'areas'"
-    ></app-aside>
-  </section>
-</div>
+</section>

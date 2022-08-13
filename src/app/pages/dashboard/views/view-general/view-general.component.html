@@ -1,32 +1,20 @@
-<div class="grid" >
+<section class="col pb-1" >
 
-  <!--Content-->
+  <!--Cards-->
+  <app-container-cards class="row" ></app-container-cards>
 
-  <section class="col pb-1" >
+  <!--Tabla-->
+  <div class=" rounded border w-100 d-flex flex-column">
 
-    <!--Top Header-->
-    <app-top-header  class="row" ></app-top-header>
-    <!--Cards-->
-    <app-container-cards class="row" ></app-container-cards>
+    <app-table-head
+      [tittle]="'Leaderboards'"
+    ></app-table-head >
+    <app-table-body class="table"
+      [listData]="listData"
+      [columnsName]="columnsName"
 
-    <!--Tabla-->
-    <div class=" rounded border w-100 d-flex flex-column">
+    ></app-table-body>
+  </div>
 
-      <app-table-head
-        [tittle]="'Leaderboards'"
-      ></app-table-head >
-      <app-table-body class="table"
-        [listData]="listData"
-        [columnsName]="columnsName"
+</section>
 
-      ></app-table-body>
-    </div>
-
-  </section>
-
-  <!--Aside-->
-  <section >
-    <app-aside
-    ></app-aside>
-  </section>
-</div>

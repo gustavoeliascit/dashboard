@@ -8,9 +8,7 @@ import { ViewAreasComponent } from './dashboard/views/view-areas/view-areas.comp
 import { ViewClientesComponent } from './dashboard/views/view-clientes/view-clientes.component';
 
 const routes: Routes = [
-  { path: '', component: ViewGeneralComponent },
-  { path: 'areas', component: ViewAreasComponent },
-  { path: 'clientes', component: ViewClientesComponent },
+  { path: '', component: ViewGeneralComponent }
 ];
 
 @NgModule({

@@ -7,6 +7,17 @@
   gap: 18px;
 }
 
+.grid-layout-columns{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 18px;
+
+}
+
+.grid-layout-rows{
+  grid-template-rows: repeat(2, 1fr);
+}
+
 .grid-2{
   display: grid;
   grid-template-columns: auto auto;
