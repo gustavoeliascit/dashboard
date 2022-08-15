@@ -8,13 +8,33 @@
       </section>
 
       <section class="row" >
-        <app-view-general></app-view-general>
+
+        <ng-container  [ngSwitch]="view" >
+
+          <ng-container *ngSwitchCase="'general'" >
+            <app-view-general  class="view" ></app-view-general>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="'areas'" >
+            <app-view-areas  class="view" ></app-view-areas>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="'clientes'" >
+            <app-view-clientes  class="view" ></app-view-clientes>
+          </ng-container>
+
+
+        </ng-container>
+
+
       </section>
 
     </section>
 
     <section >
-      <app-aside></app-aside>
+      <app-aside
+        [type]="view"
+      ></app-aside>
     </section>
   </section>
 

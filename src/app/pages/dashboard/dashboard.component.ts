@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { every } from 'rxjs';
+import { DashboardService } from './../../service/dashboard.service';
+import { Component, OnInit} from '@angular/core';
+declare var anime: any;
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +8,8 @@ import { every } from 'rxjs';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  view:string = 'general';
 
   listData = [{
     nombre:'Ralph Edwards',
@@ -93,9 +96,14 @@ export class DashboardComponent implements OnInit {
     { type: 'warning', value: '35 y 25' },
     { type: 'close', value: '25' }
   ]
-  constructor() { }
+  constructor(private dashboardService:DashboardService) { }
 
   ngOnInit(): void {
+    this.dashboardService.startTimer();
+    this.dashboardService.View$.subscribe(data=>{
+      this.view = data;
+    })
   }
+
 
 }

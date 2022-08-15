@@ -4,14 +4,14 @@
   </div>
 
   <!--General-->
-  <section  class="d-flex flex-column gap-flex-32" >
+  <section  class="d-flex flex-column gap-flex-32 aside-content" >
     <!--Timer-->
     <app-timer></app-timer>
 
     <!--General aside info-->
-    <ng-container *ngSwitchCase="'general'" >
+    <ng-container   *ngSwitchCase="'general'" >
       <!--Cards-->
-      <section class="grid-4 aside-cards" >
+      <section class="grid-4 aside-cards animate__animated   animate__fadeIn" >
         <app-card
           [tittle]="'HORAS TRABAJADAS'"
           [value]="'50%'"
@@ -48,7 +48,7 @@
       </section>
 
       <!--Chart-->
-      <section>
+      <section class="animate__animated   animate__fadeIn" >
         <div class="h6 pb-0 border-bottom mb-24"  >
           Horas por Proyecto Semanal
         </div>
@@ -60,7 +60,7 @@
       </section>
 
       <!--Leyendas-->
-      <section>
+      <section class="animate__animated   animate__fadeIn" >
         <div class="h6 pb-0 border-bottom"  >
           Leyenda de información
         </div>
@@ -85,8 +85,8 @@
 
 
     <!--Areas aside-->
-    <ng-container *ngSwitchCase="'areas'" >
-      <section class="rounded border" >
+    <ng-container   *ngSwitchCase="'areas'" >
+      <section class="rounded border animate__animated   animate__fadeIn" >
         <app-table-head
           [tittle]="'Top Leaderboard'"
           [loadState]="false"
@@ -99,7 +99,7 @@
         ></app-table-body>
       </section>
 
-      <section class="rounded border" >
+      <section class="rounded border animate__animated   animate__fadeIn" >
         <app-table-head
           [tittle]="'Bottomboard'"
           [loadState]="false"
@@ -113,7 +113,7 @@
       </section>
 
       <!---->
-      <section class="rounded border" >
+      <section class="rounded border animate__animated   animate__fadeIn" >
         <app-table-head
           [tittle]="'No Tracking Data Today'"
           [loadState]="false"
@@ -128,9 +128,9 @@
     </ng-container>
 
     <!--clientes-->
-    <ng-container *ngSwitchCase="'clientes'" >
+    <ng-container   *ngSwitchCase="'clientes'" >
       <!--Cards-->
-      <section class="grid-4 aside-cards" >
+      <section class="grid-4 aside-cards animate__animated   animate__fadeIn" >
         <app-card
           [tittle]="'Proyectos (Sem.)'"
           [value]="'10'"
@@ -168,7 +168,7 @@
         ></app-card>
       </section>
 
-      <section class="rounded border" >
+      <section class="rounded border animate__animated   animate__fadeIn" >
         <app-table-head
           [tittle]="'Proyectos con Baja Actividad'"
           [loadState]="false"
@@ -183,7 +183,7 @@
       </section>
 
       <!--Leyendas-->
-      <section>
+      <section class="animate__animated   animate__fadeIn" >
         <div class="h6 pb-0 border-bottom"  >
           Leyenda de información
         </div>

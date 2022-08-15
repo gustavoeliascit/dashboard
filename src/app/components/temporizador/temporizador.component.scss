@@ -1,29 +1,26 @@
 @import '../../../scss/colors';
 
-.temporizador{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.circular-progress{
+
+.progress-container{
   position: relative;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  background: $gradient-blue;
   display: flex;
   align-items: center;
   justify-content: center;
+  width:60px;
+  height:60px;
 }
-.circular-progress::before{
-  content: "";
-  position: absolute;
-  height: 3.4rem;
-  width: 3.4rem;
-  border-radius: 50%;
-  background-color: $bg-DP03;
-}
-.progress-value{
-  position: relative;
 
+circle{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 6px ;
+  stroke-dasharray: 160;
+  stroke-dashoffset: 10;
+  animation: anim 2s linear forwards;
+}
+
+svg{
+  position: absolute;
+  top: 0;
+  left: 0;
 }

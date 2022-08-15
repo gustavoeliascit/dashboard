@@ -1,8 +1,24 @@
 <div class="temporizador mr-2">
-  <div class="circular-progress">
+
+  <div class="progress-container" >
+
     <span class="progress-value" >
-      <span class="text-size-1 font-weight-bold">{{timeLeft}}</span>
+      <span class="text-size-1 font-weight-bold">{{(dashboardService.TimeLeft$ | async)}}</span>
       <span class="caption" >s</span>
     </span>
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60px" height="60px">
+      <defs>
+         <linearGradient id="GradientColor">
+            <stop offset="11.52%" stop-color="#8DF8FF" />
+            <stop offset="91.55%" stop-color="#468EF9"  />
+         </linearGradient>
+      </defs>
+      <circle class="circle" cx="30" cy="30" r="24" stroke-linecap="round"  />
+  </svg>
   </div>
+
+
 </div>

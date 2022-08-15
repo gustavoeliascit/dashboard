@@ -14,7 +14,11 @@
 
 }
 
-
+.aside-content{
+  @include media-breakpoint("xl"){
+    min-width: 32rem;
+  }
+}
 .aside{
   display: flex;
 

@@ -1,5 +1,5 @@
+import { DashboardService } from './../../service/dashboard.service';
 import { Component, OnInit } from '@angular/core';
-import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-temporizador',
@@ -8,24 +8,30 @@ import { timer } from 'rxjs';
 })
 export class TemporizadorComponent implements OnInit {
 
-  timeLeft: number = 60;
-  interval:any;
-  subscribeTimer: any;
-
-  constructor() { }
+  constructor(public dashboardService:DashboardService) { }
 
   ngOnInit(): void {
-    this.startTimer();
+
+    this.startConic();
   }
 
-  startTimer() {
-    this.interval = setInterval(() => {
-      if(this.timeLeft > 0) {
-        this.timeLeft--;
-      } else {
-        this.timeLeft = 60;
+  valueRest = 2.4 ;
+  offset = 160;
+
+  startConic(){
+
+    this.dashboardService.TimeLeft$
+    .subscribe(time=>{
+      if(time ===60){
+        this.offset = 160;
       }
-    },1000)
+
+      this.offset = this.offset - this.valueRest;
+
+      let circularProgress = document.querySelector<HTMLElement>(".circle");
+      circularProgress!.style.strokeDashoffset = String(this.offset);
+    })
+
   }
 
 }
