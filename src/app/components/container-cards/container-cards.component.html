@@ -5,16 +5,20 @@
       (mouseup)="dragUp()"
       (mousemove)="dragMove($event)">
 
-  <app-card
-     *ngFor="let card of listCard"
 
-    class="mr-1"
-    [tittle]="card.tittle"
-    [value]="card.value"
-    [porcent]="card.porcent"
-    [caption]="card.caption"
-    [backgroundIcon]="card.icon"
-    [icon]="card.growt"
-  ></app-card>
+      <ul class="slider" >
+
+        <app-card
+           *ngFor="let card of listCard"
+
+          class="mr-1 slider-element"
+          [tittle]="card.tittle"
+          [value]="card.value"
+          [porcent]="card.porcent"
+          [caption]="card.caption"
+          [backgroundIcon]="card.icon"
+          [icon]="card.growt"
+        ></app-card>
+      </ul>
 
 </div>

@@ -68,6 +68,23 @@ export class ContainerCardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.startSlider();
+  }
+
+
+  startSlider(){
+
+    const marqueeElementsDisplayed = this.listCard.length;
+    const marqueeContent = document.querySelector(".slider");
+
+
+    setInterval(()=>{
+
+      for(let i=0; i<marqueeElementsDisplayed; i++) {
+        marqueeContent!.appendChild(marqueeContent!.children[i].cloneNode(true));
+      }
+
+    },10000)
   }
 
   dragCards(event:MouseEvent){

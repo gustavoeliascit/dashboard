@@ -21,6 +21,8 @@ circle{
 
 svg{
   position: absolute;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
   top: 0;
   left: 0;
 }

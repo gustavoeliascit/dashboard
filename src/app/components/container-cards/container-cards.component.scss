@@ -6,7 +6,20 @@
   padding-bottom: 3rem;
   cursor: grab;
   user-select: none;
+}
+.slider{
+  display: flex;
+  animation: scroll 280s linear infinite;
 
+}
+
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-240px * 40))
+  }
 }
 
 .container-cards::-webkit-scrollbar {
