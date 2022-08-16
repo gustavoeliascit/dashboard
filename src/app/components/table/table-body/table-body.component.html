@@ -1,10 +1,10 @@
-<table class="w-100">
+<table class="w-100 animate__animated animate__fadeIn">
 
   <thead class=" text-uppercase border ">
     <tr >
       <th class="vertical-align-middle"  >N°</th>
 
-      <ng-container  *ngFor="let column of columnsName" >
+      <ng-container  *ngFor="let column of columnsName " >
         <th class="text-left vertical-align-middle">
           <div class="d-flex  align-items-center" >
             <img  *ngIf="column.icon" class="mr-4 icon-arrow " src="../../../../assets/icons/outline/outline-arrows.svg" alt="filter">
@@ -21,21 +21,21 @@
   <tbody [ngSwitch]="typeTable" >
     <!--Default-->
     <ng-container  *ngSwitchCase="'default'" >
-      <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
-        <th class=" text-size-3 font-weight-regular  " >
+      <tr  class="bg-DP03 row border " *ngFor="let item of listData | slice: start:end; let i = index" >
+        <th class=" text-size-3 font-weight-regular  animate__animated animate__fadeIn" >
           {{  i <= 8 ? ('0' + (i+1)) : i+1}}
         </th>
 
         <td class=" text-size-3 " >
-          <div class="text-overflow text-size-4 " >
+          <div class="text-overflow text-size-4 animate__animated animate__fadeIn" >
             {{item.nombre}}
           </div>
         </td>
 
         <td class=" text-size-3  " >
           <div class="d-flex align-items-center justify-content-start" >
-            <img class="mr-10 ml-1" src="../../../../../assets/icons/status/status-check.svg" alt="status-icon">
-            <div class="text-overflow text-size-4 " >
+            <img class="mr-10 ml-1 animate__animated animate__fadeIn" src="../../../../../assets/icons/status/status-check.svg" alt="status-icon">
+            <div class="text-overflow text-size-4 animate__animated animate__fadeIn" >
               {{item.actividad}}
             </div>
           </div>
@@ -43,8 +43,8 @@
 
         <td class=" text-size-3  " >
           <div class="d-flex align-items-center justify-content-start" >
-            <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
-            <div class="text-overflow text-size-4 " >
+            <img class="mr-10 ml-1 animate__animated animate__fadeIn" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+            <div class="text-overflow text-size-4 animate__animated animate__fadeIn" >
               {{item.horas}}
             </div>
           </div>
@@ -52,8 +52,8 @@
 
         <td class=" text-size-3  " >
           <div class="d-flex align-items-center justify-content-start" >
-            <img class="mr-10 ml-1" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
-            <div class="text-overflow text-size-4 " >
+            <img class="mr-10 ml-1 animate__animated animate__fadeIn" src="../../../../assets/icons/status/status-check.svg" alt="status-icon">
+            <div class="text-overflow text-size-4 animate__animated animate__fadeIn" >
               {{item.semanales}}
             </div>
           </div>
@@ -63,8 +63,8 @@
 
     <!--Activity-->
     <ng-container  *ngSwitchCase="'activity'" >
-      <tr  class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
-        <th class=" text-size-3 font-weight-regular  " >
+      <tr  class="bg-DP03 row border animate__animated animate__fadeIn" *ngFor="let item of listData; let i = index" >
+        <th class=" text-size-3 font-weight-regular  animate__animated animate__fadeIn" >
           {{  i <= 8 ? ('0' + (i+1)) : i+1}}
         </th>
 

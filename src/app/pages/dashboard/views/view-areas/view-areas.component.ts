@@ -1,3 +1,4 @@
+import { DashboardService } from './../../../../service/dashboard.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-areas.component.scss']
 })
 export class ViewAreasComponent implements OnInit {
+
+  theView:string = 'dev';
+
   listData = [{
     nombre:'Ralph Edwards',
     actividad:'53%',
@@ -56,6 +60,41 @@ export class ViewAreasComponent implements OnInit {
     actividad:'93%',
     horas: '8.7',
     semanales: '22/44'
+  },{
+    nombre:'Ralph Edwards',
+    actividad:'53%',
+    horas: '10.2',
+    semanales: '35/34'
+  },{
+    nombre:'Floyd Miles',
+    actividad:'100%',
+    horas: '3.5',
+    semanales: '33/34'
+  },{
+    nombre:'Ralph Edwards',
+    actividad:'53%',
+    horas: '10.2',
+    semanales: '35/34'
+  },{
+    nombre:'Wade Warren',
+    actividad:'88%',
+    horas: '11.3',
+    semanales: '38/44'
+  },{
+    nombre:'Courtney Henry',
+    actividad:'38%',
+    horas: '9.4',
+    semanales: '23/44'
+  },{
+    nombre:'Ralph Edwards',
+    actividad:'53%',
+    horas: '10.2',
+    semanales: '35/34'
+  },{
+    nombre:'Eleanor Pena',
+    actividad:'5%',
+    horas: '16.8',
+    semanales: '12/44'
   }]
 
 
@@ -91,9 +130,17 @@ export class ViewAreasComponent implements OnInit {
     { type: 'warning', value: '35 y 25' },
     { type: 'close', value: '25' }
   ]
-  constructor() { }
+  constructor(public dashboardService:DashboardService) { }
 
   ngOnInit(): void {
+    this.startSubViews();
+  }
+
+  startSubViews(){
+    this.dashboardService.subView$
+    .subscribe(subView=>{
+      this.theView = subView;
+    })
   }
 
 }

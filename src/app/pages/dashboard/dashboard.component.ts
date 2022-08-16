@@ -9,7 +9,7 @@ declare var anime: any;
 })
 export class DashboardComponent implements OnInit {
 
-  view:string = 'general';
+  view:string = '';
 
   listData = [{
     nombre:'Ralph Edwards',
@@ -100,6 +100,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.dashboardService.startTimer();
+
     this.dashboardService.View$.subscribe(data=>{
       this.view = data;
     })

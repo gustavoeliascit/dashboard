@@ -1,3 +1,4 @@
+import { DashboardService } from './../../../service/dashboard.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -11,9 +12,18 @@ export class TableBodyComponent implements OnInit {
   @Input() columnsName:any[] = [];
   @Input() typeTable:string = 'default';
   //Type tables: default, activity, date and project
-  constructor() { }
+  constructor(private dashboardService:DashboardService) { }
 
+
+  start:number = 0;
+  end:number = 10;
   ngOnInit(): void {
+    this.startPagination();
+  }
+
+
+  startPagination(){
+
   }
 
 }

@@ -3,15 +3,54 @@
   <!--Tabla-->
   <div class=" rounded mt-4 border w-100 d-flex flex-column overflow-hidden">
 
-    <app-table-head
-      [icon]="'computer'"
-      [tittle]="'DEV Team'"
-    ></app-table-head >
-    <app-table-body class="table"
-      [listData]="listData"
-      [columnsName]="columnsName"
 
-    ></app-table-body>
+    <ng-container [ngSwitch]="theView" >
+
+      <ng-container *ngSwitchCase="'dev'" >
+
+        <app-table-head
+          [icon]="'computer'"
+          [tittle]="'DEV Team'"
+        ></app-table-head >
+
+        <app-table-body class="table"
+          [listData]="listData"
+          [columnsName]="columnsName"
+
+        ></app-table-body>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'sac'" >
+
+        <app-table-head
+          [icon]="'headphones'"
+          [tittle]="'Servicio al Cliente'"
+        ></app-table-head >
+
+        <app-table-body class="table"
+          [listData]="listData"
+          [columnsName]="columnsName"
+
+        ></app-table-body>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'design'" >
+
+        <app-table-head
+          [icon]="'pain'"
+          [tittle]="'Design Team'"
+        ></app-table-head >
+
+        <app-table-body class="table"
+          [listData]="listData"
+          [columnsName]="columnsName"
+
+        ></app-table-body>
+      </ng-container>
+
+    </ng-container>
+
+
   </div>
 
   <!--Leyendas-->
