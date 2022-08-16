@@ -87,6 +87,9 @@ export class AsideComponent implements OnInit {
 
       let aside = document.querySelector<HTMLElement>('.aside') ;
       aside!.classList!.toggle('open-aside');
+
+      const body = document.querySelector('body');
+      body!.classList!.toggle('overflow-hidden');
     }
   }
 
