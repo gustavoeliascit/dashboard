@@ -10,13 +10,19 @@
   height:60px;
 }
 
-circle{
+.circle{
   fill: none;
   stroke: url(#GradientColor);
   stroke-width: 6px ;
   stroke-dasharray: 160;
   stroke-dashoffset: 10;
   animation: anim 2s linear forwards;
+}
+
+.circle-bg{
+  fill: none;
+  stroke: $bg-DP03;
+  stroke-width: 6px ;
 }
 
 svg{
