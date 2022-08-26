@@ -1,12 +1,14 @@
 import { DashboardService } from './../../../service/dashboard.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-table-body',
   templateUrl: './table-body.component.html',
   styleUrls: ['./table-body.component.scss']
 })
-export class TableBodyComponent implements OnInit {
+export class TableBodyComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('tBody') tbody!:ElementRef;
 
   @Input() listData:any[] = [];
   @Input() columnsName:any[] = [];
@@ -21,9 +23,19 @@ export class TableBodyComponent implements OnInit {
     this.startPagination();
   }
 
+  ngAfterViewInit(): void {
 
-  startPagination(){
+      let number = 0;
+      setInterval(()=>{
+        //this.tbody.nativeElement.scroll(0, number = number + 4)
+      },100)
 
+      this.tbody.nativeElement.addEventListener('scroll', (event:any) => {console.log(event)});
+    }
+
+
+
+    startPagination(){
   }
 
 }

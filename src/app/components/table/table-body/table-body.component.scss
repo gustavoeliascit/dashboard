@@ -16,10 +16,51 @@ tr{
   border-right: none!important;
 }
 
-
 .icon-arrow {
   height: 14px;
   margin-left: 1rem;
 }
 
+
+tbody{
+  height: 32rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+  display: block;
+}
+
+ tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody::-webkit-scrollbar{
+  display: none;
+}
+
+thead tr th:first-child{
+  width: 4rem;
+
+}
+
+tbody tr th:first-child{
+  width: 4rem;
+}
+
+tbody > tr{
+
+  animation: move 18s linear infinite;
+}
+
+
+
+@keyframes move {
+  4% {
+     transform:translateY(0);
+  }
+  100% {
+     transform:translateY(calc(-28px * 20));
+  }
+}
 
