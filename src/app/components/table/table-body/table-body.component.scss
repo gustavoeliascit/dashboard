@@ -10,10 +10,8 @@ th{
   margin-left: 1rem !important;
 }
 
-tr{
-  border-bottom: none!important;
-  border-left: none!important;
-  border-right: none!important;
+tbody > tr{
+  border-bottom: transparent 1px solid;
 }
 
 .icon-arrow {
@@ -22,34 +20,7 @@ tr{
 }
 
 
-tbody{
-  height: 32rem;
-  overflow: auto;
-  scroll-behavior: smooth;
-  display: block;
-}
-
- tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-tbody::-webkit-scrollbar{
-  display: none;
-}
-
-thead tr th:first-child{
-  width: 4rem;
-
-}
-
-tbody tr th:first-child{
-  width: 4rem;
-}
-
-tbody > tr{
-
+.move  >  tr{
   animation: move 18s linear infinite;
 }
 

@@ -8,12 +8,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  border-spacing: 0px !important;
+  border-spacing: 0px 0px !important;
   border-collapse: collapse;
 }
 
 tr{
   border-bottom: $border-style;
+}
+
+tbody{
+  background-color: $opacity-white;
 }
 
 tbody tr:hover{
@@ -45,4 +49,14 @@ tbody{
 
 .vertical-align-middle{
   vertical-align: middle;
+}
+
+.table-overflow{
+  max-height: 36rem;
+  overflow: auto;
+}
+
+
+.hidden-scroll::-webkit-scrollbar{
+  display: none;
 }

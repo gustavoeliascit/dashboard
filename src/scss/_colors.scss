@@ -1,12 +1,14 @@
 /*Neutral colors*/
 $neutral-black: #000000;
 $neutral-white: #FFFFFF;
+$opacity-white: rgba(255, 255, 255, 0.1);
 
 /*Background*/
 $bg-DP01: #1F1F1F;
 $bg-DP02: #232323;
 $bg-DP03: #272727;
 $bg-DP04: #292929;
+
 
 /*Gardients*/
 $gradient-main-outlin: linear-gradient(90deg, #F58523 0%, #BD4E80 49.48%, #2ABCDA 100%);

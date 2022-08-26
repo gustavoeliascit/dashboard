@@ -47,13 +47,13 @@ export class DashboardService {
 
         this.timeLeft = 60;
         this.setimeLeft(60);
-        //this.setView(views[contador])
+        this.setView(views[contador])
 
         if(contador != 1)
         {
           contador++;
         }else{
-          //this.setSubView(subViews[subContador]);
+          this.setSubView(subViews[subContador]);
           subContador++;
           if(subContador === 3){
             contador++;

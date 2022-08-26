@@ -4,12 +4,12 @@
   <app-container-cards class="row" ></app-container-cards>
 
   <!--Tabla-->
-  <div class=" rounded border w-100 d-flex flex-column overflow-hidden">
+  <div class=" rounded border w-100 d-flex flex-column"  [ngClass]="{'table-overflow':listData.length >10}">
 
     <app-table-head
       [tittle]="'Leaderboards'"
     ></app-table-head >
-    <app-table-body class="table"
+    <app-table-body class="table hidden-scroll "
       [listData]="listData"
       [columnsName]="columnsName"
 

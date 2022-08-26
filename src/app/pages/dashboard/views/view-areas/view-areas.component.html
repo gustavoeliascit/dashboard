@@ -1,7 +1,7 @@
 <section class="col pb-1 animate__animated animate__fadeInUp" >
 
   <!--Tabla-->
-  <div class=" rounded mt-4 border w-100 d-flex flex-column overflow-hidden">
+  <div class=" rounded mt-4 border w-100 d-flex flex-column overflow-hidden" [ngClass]="{'table-overflow':listData.length >10}" >
 
 
     <ng-container [ngSwitch]="theView" >
@@ -13,7 +13,7 @@
           [tittle]="'DEV Team'"
         ></app-table-head >
 
-        <app-table-body class="table"
+        <app-table-body class="table hidden-scroll"
           [listData]="listData"
           [columnsName]="columnsName"
 
@@ -27,7 +27,7 @@
           [tittle]="'Servicio al Cliente'"
         ></app-table-head >
 
-        <app-table-body class="table"
+        <app-table-body class="table hidden-scroll"
           [listData]="listData"
           [columnsName]="columnsName"
 
@@ -41,7 +41,7 @@
           [tittle]="'Design Team'"
         ></app-table-head >
 
-        <app-table-body class="table"
+        <app-table-body class="table hidden-scroll"
           [listData]="listData"
           [columnsName]="columnsName"
 
