@@ -24,6 +24,10 @@ tbody > tr{
   animation: move 18s linear infinite;
 }
 
+tr:hover {
+  animation-play-state: paused;
+}
+
 
 
 @keyframes move {

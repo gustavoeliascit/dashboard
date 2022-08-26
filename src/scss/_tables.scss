@@ -60,3 +60,7 @@ tbody{
 .hidden-scroll::-webkit-scrollbar{
   display: none;
 }
+
+thead{
+  transform: translateY(-1px);
+}
