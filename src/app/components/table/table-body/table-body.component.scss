@@ -1,3 +1,5 @@
+
+
 tr:last-child td:last-child{
   border-bottom-right-radius: 16px !important;
 }
@@ -21,7 +23,7 @@ tbody > tr{
 
 
 .move  >  tr{
-  animation: move 18s linear infinite;
+  animation: move var(--rows-animation-duration) linear infinite;
 }
 
 tr:hover {
@@ -31,11 +33,11 @@ tr:hover {
 
 
 @keyframes move {
-  4% {
+  2% {
      transform:translateY(0);
   }
   100% {
-     transform:translateY(calc(-28px * 20));
+     transform:translateY(calc(-28px * var(--rows-elements)));
   }
 }
 

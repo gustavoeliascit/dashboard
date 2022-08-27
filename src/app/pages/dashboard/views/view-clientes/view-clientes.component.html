@@ -1,16 +1,18 @@
 <section class="col pb-1 animate__animated animate__fadeInUp" >
   <!--Tabla-->
-  <div class=" rounded border mt-4 w-100 d-flex flex-column overflow-hidden" [ngClass]="{'table-overflow':listData.length >10}">
+  <div class=" rounded mt-4 border w-100 d-flex flex-column " [ngClass]="{'table-overflow':listData.length >9}">
 
-    <app-table-head
-      [icon]="'cup'"
-      [tittle]="'Leaderboards'"
-    ></app-table-head >
-    <app-table-body class="table"
-      [listData]="listData"
-      [columnsName]="columnsName"
+      <app-table-head
+        [icon]="'cup'"
+        [tittle]="'Leaderboards'"
+      ></app-table-head >
+      <app-table-body class="table hidden-scroll"
+        [listData]="listData"
+        [columnsName]="columnsName"
 
-    ></app-table-body>
+      ></app-table-body>
+
+
   </div>
 
   <!--Leyendas-->

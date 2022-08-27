@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --rows-displayed: 10;
+  --rows-animation-duration: calc(var(--rows-elements) * 0.9s);
+}
+
+
 @import './scss/global';
 
 /*Normalize*/

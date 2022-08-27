@@ -31,6 +31,9 @@ export class TableBodyComponent implements OnInit, AfterViewInit {
       },100)
 
       this.tbody.nativeElement.addEventListener('scroll', (event:any) => {console.log(event)});
+
+      this.dashboardService.changeNumberRowsForAnimation();
+
     }
 
 

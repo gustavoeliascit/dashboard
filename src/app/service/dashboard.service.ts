@@ -67,4 +67,20 @@ export class DashboardService {
       }
     },1000)
   }
+
+  changeNumberRowsForAnimation(){
+    // Get the root element
+    const root = document.documentElement;
+
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--rows-displayed");
+
+    const marqueeContent = document.querySelector("tbody");
+
+
+    for(let i=0; i< Number(marqueeElementsDisplayed)*2; i++) {
+      marqueeContent!.appendChild(marqueeContent!.children[i].cloneNode(true));
+    }
+
+    root.style.setProperty("--rows-elements", String(marqueeContent!.children.length));
+  }
 }

@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { DashboardService } from './../../../../service/dashboard.service';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-view-clientes',
   templateUrl: './view-clientes.component.html',
   styleUrls: ['./view-clientes.component.scss']
 })
-export class ViewClientesComponent implements OnInit {
+export class ViewClientesComponent implements OnInit, AfterViewInit {
 
   listData = [{
     nombre:'Ralph Edwards',
@@ -93,9 +94,13 @@ export class ViewClientesComponent implements OnInit {
     { type: 'close', value: '25' }
   ]
 
-  constructor() { }
+  constructor(public dashboardService:DashboardService) { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+      this.dashboardService.changeNumberRowsForAnimation()
   }
 
 }

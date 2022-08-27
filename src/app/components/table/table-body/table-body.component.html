@@ -18,7 +18,7 @@
     </tr>
   </thead>
 
-  <tbody  #tBody [ngSwitch]="typeTable" [ngClass]="{'default':typeTable === 'default', 'move':listData.length > 10}"  >
+  <tbody  #tBody [ngSwitch]="typeTable" [ngClass]="{'default':typeTable === 'default', 'move':listData.length > 9}"  >
     <!--Default-->
     <ng-container  *ngSwitchCase="'default'" >
       <tr   class="bg-DP03 row border " *ngFor="let item of listData; let i = index" >
